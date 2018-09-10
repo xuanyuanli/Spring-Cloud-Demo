@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8900
+spring:
+  application:
+    name: blog-zuul
+zuul:
+  routes:
+    api-a:
+      path: /column/**
+      serviceId: blog-app
+    api-b:
+      path: /article/**
+      serviceId: blog-app
