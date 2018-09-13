@@ -13,8 +13,8 @@
     <modules>
         <module>parent</module>
         <module>eureka-server</module>
-	<module>config-server</module>
-	<module>blog-api</module>
+		<module>config-server</module>
+		<module>blog-api</module>
         <module>blog-service</module>
         <module>blog-app</module>
         <module>blog-gateway</module>
