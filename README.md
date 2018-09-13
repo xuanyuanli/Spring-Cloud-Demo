@@ -12,6 +12,6 @@
 - 配置中心示例： http://localhost:8888/foo/dev
 - blog-app熔断器示例（不启动blog-service）：http://localhost:14201/blog/list
 - blog-app读取配置中心配置示例：http://localhost:14201/env?key=name
-- blog-app重新读取配置中心配置，用idea的REST Client发送post请求：http://localhost:14201/actuator/bus-refresh ，在控制台可以看到容器刷新并重新读取了配置
+- blog-app重新读取配置中心配置，需要配合rabbitmq使用。用idea的REST Client发送post请求：http://localhost:14201/actuator/bus-refresh ，在控制台可以看到容器刷新并重新读取了配置
 - 网关示例，会路由到blog-app：http://localhost:8900/column/env?key=name 或 http://localhost:8900/article/env?key=name
 
