@@ -1,1 +1,4 @@
 foo: app
+profile.id: dev
+name: liheng
+age: 26
