@@ -36,13 +36,16 @@ public class MyFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         log.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
-        Object accessToken = request.getParameter("token");
-        if (accessToken == null) {
-            log.warn("token is empty");
+        Object connection = request.getHeader("Connection");
+        if (connection==null){
+            connection = request.getHeader("connection");
+        }
+        if (connection == null) {
+            log.warn("connection is empty");
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
             try {
-                ctx.getResponse().getWriter().write("token is empty");
+                ctx.getResponse().getWriter().write("connection is empty");
             } catch (Exception e) {
             }
 
