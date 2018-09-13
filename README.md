@@ -6,7 +6,6 @@
 - blog-gateway是服务网关，通过网关来访问blog-app
 - config-server是配置中心，用blog-app同时作为config-client
 - 断路器的演示在bolg-app和blog-api中，Feign自带了断路器。后期考虑自定义断路器逻辑
-- 链路追踪
 
 # 访问url
 - 注册中心：http://localhost:8761/
