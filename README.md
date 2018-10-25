@@ -7,10 +7,11 @@
 - config-server是配置中心，用blog-app同时作为config-client
 - 断路器的演示在bolg-app和blog-api中，Feign自带了断路器。后期考虑自定义断路器逻辑
 - zipkin server需要从[latest server](https://search.maven.org/remote_content?g=io.zipkin.java&a=zipkin-server&v=LATEST&c=exec) 下载，然后java -jar zipkin-server.jar即可启动
-
+- admin-server是Spring Boot Admin，用于应用监控
 # 访问url
 - 注册中心：http://localhost:8761/
 - 配置中心示例： http://localhost:8888/foo/dev
+- admin-server: http://localhost:8080/
 - blog-app熔断器示例（不启动blog-service）：http://localhost:14201/blog/list
 - blog-app读取配置中心配置示例：http://localhost:14201/env?key=name
 - blog-app重新读取配置中心配置，需要配合rabbitmq使用。用idea的REST Client发送post请求：http://localhost:14201/actuator/bus-refresh ，在控制台可以看到容器刷新并重新读取了配置
@@ -23,3 +24,4 @@
 # 其他选型
 - 配置中心可选携程的Apollo
 - 分布式链路追踪可选Skywalking
+- 服务监控可选open-falcon

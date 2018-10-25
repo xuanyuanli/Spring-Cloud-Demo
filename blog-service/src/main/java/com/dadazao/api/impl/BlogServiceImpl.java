@@ -13,6 +13,7 @@ import java.util.List;
 public class BlogServiceImpl implements BlogService {
 
     private static final List<Blog> BLOGS = new ArrayList<>(4);
+
     static {
         BLOGS.add(new Blog(1L, "Java", "Java Code"));
         BLOGS.add(new Blog(2L, "GoLand", "GoLand Code"));
@@ -27,7 +28,7 @@ public class BlogServiceImpl implements BlogService {
 
     @GetMapping("/get/{id}")
     public Blog get(@PathVariable("id") Long id) {
-        return BLOGS.stream().filter(t->t.getId().equals(id)).findFirst().get();
+        return BLOGS.stream().filter(t -> t.getId().equals(id)).findFirst().get();
     }
 }
 

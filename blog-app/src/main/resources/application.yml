@@ -13,7 +13,7 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://localhost:8888/
+#      uri: http://localhost:8888/
     discovery:
       enabled: true
       serviceId: config-server
@@ -42,9 +42,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh,info,health
+#        include: bus-refresh,info,health
+        include: "*"
 
 logging:
   level:
-#    org.springframework.web: debug
-    org.springframework.cloud: debug
+    #    org.springframework.web: debug
+    org.springframework.cloud: info

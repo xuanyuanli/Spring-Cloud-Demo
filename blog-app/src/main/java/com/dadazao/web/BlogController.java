@@ -24,10 +24,10 @@ public class BlogController {
     }
 
     @GetMapping("/env")
-    public Result configCenterDemo(String key){
+    public Result configCenterDemo(String key) {
         Result result = new Result();
         result.setCode("200");
-        result.setResult(environment.getProperty(key,"nil"));
+        result.setResult(environment.getProperty(key, "nil"));
         return result;
     }
 }

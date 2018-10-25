@@ -37,7 +37,7 @@ public class MyFilter extends ZuulFilter {
         HttpServletRequest request = ctx.getRequest();
         log.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
         Object connection = request.getHeader("Connection");
-        if (connection==null){
+        if (connection == null) {
             connection = request.getHeader("connection");
         }
         if (connection == null) {

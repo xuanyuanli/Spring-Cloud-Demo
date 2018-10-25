@@ -2,8 +2,8 @@ package com.dadazao.web;
 
 public class Result {
     private String code;
-    private  String errorMsg;
-    private  Object result;
+    private String errorMsg;
+    private Object result;
 
     public String getCode() {
         return code;
