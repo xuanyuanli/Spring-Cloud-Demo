@@ -20,7 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <docker.warehouse.name>registry.cn-beijing.aliyuncs.com/liheng/jujube</docker.warehouse.name>
+        <docker.warehouse.name>registry.cn-beijing.aliyuncs.com/liheng</docker.warehouse.name>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
